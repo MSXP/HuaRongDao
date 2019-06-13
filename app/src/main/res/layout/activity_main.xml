@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/ShowInfo"
+        android:layout_width="360dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="21sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+        android:id="@+id/Qp"
+        android:layout_width="360dp"
+        android:layout_height="450dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/board_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ShowInfo">
+
+        <Button
+            android:id="@+id/Qz1"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:background="@drawable/role_soldier1" />
+
+        <Button
+            android:id="@+id/Qz2"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:background="@drawable/role_soldier2" />
+
+        <Button
+            android:id="@+id/Qz3"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:background="@drawable/role_soldier3" />
+
+        <Button
+            android:id="@+id/Qz4"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:background="@drawable/role_soldier4" />
+
+        <Button
+            android:id="@+id/Qz5"
+            android:layout_width="90dp"
+            android:layout_height="180dp"
+            android:background="@drawable/role_zhangfei" />
+
+        <Button
+            android:id="@+id/Qz6"
+            android:layout_width="90dp"
+            android:layout_height="180dp"
+            android:background="@drawable/role_zhaoyun" />
+
+        <Button
+            android:id="@+id/Qz7"
+            android:layout_width="90dp"
+            android:layout_height="180dp"
+            android:background="@drawable/role_huangzhong" />
+
+        <Button
+            android:id="@+id/Qz8"
+            android:layout_width="90dp"
+            android:layout_height="180dp"
+            android:background="@drawable/role_machao" />
+
+        <Button
+            android:id="@+id/Qz9"
+            android:layout_width="180dp"
+            android:layout_height="90dp"
+            android:background="@drawable/role_guanyu" />
+
+        <Button
+            android:id="@+id/Qz10"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:background="@drawable/role_caocao" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/showStep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/init_step"
+        android:textAllCaps="false"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="21sp"
+        app:layout_constraintStart_toStartOf="@+id/Qp"
+        app:layout_constraintTop_toBottomOf="@+id/Qp" />
+
+    <TextView
+        android:id="@+id/timer_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/timer_text"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="21sp"
+        app:layout_constraintEnd_toStartOf="@+id/chronometer"
+        app:layout_constraintTop_toBottomOf="@+id/Qp" />
+
+    <Chronometer
+        android:id="@+id/chronometer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_weight="25"
+        android:format="%s"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="21sp"
+        app:layout_constraintEnd_toEndOf="@+id/Qp"
+        app:layout_constraintTop_toBottomOf="@+id/Qp" />
+
+    <Button
+        android:id="@+id/left_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/button_bg2"
+        android:onClick="onReset"
+        android:text="@string/left_button"
+        android:textColor="@android:color/background_dark"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/Qp" />
+
+    <Button
+        android:id="@+id/right_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/button_bg2"
+        android:onClick="onQuit"
+        android:text="@string/right_button"
+        android:textColor="@android:color/background_dark"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/Qp" />
+
+</android.support.constraint.ConstraintLayout>
